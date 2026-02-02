@@ -1,0 +1,8 @@
+-- 08_rensa.sql
+-- Ta bort hela databasen
+IF DB_ID('SkolaDB') IS NOT NULL
+BEGIN
+    ALTER DATABASE SkolaDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE SkolaDB;
+END
+GO
