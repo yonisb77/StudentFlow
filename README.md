@@ -1,46 +1,33 @@
-SkolSystem Console App
+📚 SkolSystem Console App
+SkolSystem är en robust konsolapplikation byggd i .NET som hanterar elever, kurser och betyg. Genom att använda Entity Framework Core (Database First) kommunicerar applikationen effektivt med en SQL-databas för att erbjuda en stabil och användarvänlig hantering av skoladministration.
 
-📚 SkolSystem är en konsolapplikation byggd i .NET som hanterar elever, kurser och registreringar. Applikationen använder Database First via Entity Framework Core och SQL Server, samt LINQ för rapporter. Den är utvecklad för att ge en stabil och användarvänlig hantering av skoldata.
+🚀 Funktioner
+📝 Grundläggande hantering (CRUD)
+Hantera Elever: Lista, lägg till och ta bort elever. Vid borttagning rensas även tillhörande kursregistreringar automatiskt.
 
-Funktioner
-📝 Grundläggande funktioner
+Kursadministration: Visa en översikt av alla tillgängliga kurser.
 
-Lista alla elever och kurser.
+Registrering: Registrera elever på specifika kurser på ett smidigt sätt.
 
-Registrera elever på kurser.
+Betygsättning: Uppdatera betyg för elever (validerat enligt skalan: IG eller G).
 
-Uppdatera betyg (endast IG eller G).
+📊 Rapportering (LINQ)
+Elever per kurs: Se en detaljerad lista över vilka elever som läser vilken kurs.
 
-Ta bort elever, inklusive deras kursregistreringar.
+Skalbarhet: Arkitekturen är förberedd för att enkelt kunna expandera med fler rapporter (t.ex. medelbetyg eller kurser per elev).
 
-📊 Rapporter
+⚡ Stabilitet & UX
+Datavalidering: Inbyggd kontroll för att förhindra tomma strängar, felaktiga datumformat eller ogiltiga heltal.
 
-Elever per kurs (visar vilka elever som är registrerade på varje kurs).
+Felhantering: Använder try-catch block för att säkerställa att programmet inte kraschar vid oväntade databas- eller inmatningsfel.
 
-Möjlighet att enkelt lägga till fler rapporter, t.ex. kurser per elev.
+Visuell upplevelse: Fullt stöd för UTF-8 vilket tillåter användning av emojis och tydlig formatering i konsolen.
 
-⚡ Stabilitet
+🛠 Teknologi
+Runtime: .NET 7 / C# 11
 
-Validerar användarinput (tomt, fel format, heltal).
+ORM: Entity Framework Core 7 (Database First)
 
-Felhantering med try/catch för att programmet inte ska krascha.
+Databas: SQL Server
 
-Betyg kan endast sättas till giltiga värden: IG eller G.
-
-🎨 Användarvänlighet
-
-Konsolen använder UTF-8, vilket gör att emojis fungerar för att göra menyn mer visuell.
-
-Tydliga meddelanden vid fel och bekräftelse på utförda operationer.
-
-Teknologi
-
-.NET 7 Console App
-
-C# 11
-
-Entity Framework Core 7 (Database First)
-
-SQL Server (databas)
-
-LINQ för rapportering
+Query-språk: LINQ för effektiv datautvinning
