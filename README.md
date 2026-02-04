@@ -1,4 +1,4 @@
-🎓 StudentFlow – School Management System
+🎓 StudentFlow – Management System
 StudentFlow är en kraftfull konsolapplikation utvecklad i C# och .NET. Systemet är byggt för att centralisera hanteringen av elever, kurser och betyg genom en robust integration med SQL Server via Entity Framework Core. Med ett fokus på stabilitet och användarvänlighet erbjuder StudentFlow en tydlig översikt av skolans administrativa flöden.
 
 🛠 Teknisk Stack
