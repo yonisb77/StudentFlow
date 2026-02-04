@@ -1,4 +1,4 @@
-﻿namespace SkolaApp
+﻿namespace StudentFlow.Models
 {
     internal class Registrering
     {
