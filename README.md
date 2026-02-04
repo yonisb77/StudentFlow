@@ -1,4 +1,6 @@
-# 🎓 StudentFlow – Management System
+# 🎓 StudentFlow – Management System 
+Yonis Bashir
+
 
 **StudentFlow** är en kraftfull och användarvänlig konsolapplikation utvecklad i **C# och .NET**, framtagen för att effektivisera och centralisera hanteringen av **elever, kurser och betyg**. Systemet använder **Entity Framework Core (Database First)** tillsammans med **SQL Server** för stabil, säker och skalbar datahantering.
 
