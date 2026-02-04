@@ -1,35 +1,127 @@
-🎓 StudentFlow – Management System
-StudentFlow är en kraftfull konsolapplikation utvecklad i C# och .NET. Systemet är byggt för att centralisera hanteringen av elever, kurser och betyg genom en robust integration med SQL Server via Entity Framework Core. Med ett fokus på stabilitet och användarvänlighet erbjuder StudentFlow en tydlig översikt av skolans administrativa flöden.
+# 🎓 StudentFlow – Management System
 
-🛠 Teknisk Stack
-Språk: C# 11
+**StudentFlow** är en kraftfull och användarvänlig konsolapplikation utvecklad i **C# och .NET**, framtagen för att effektivisera och centralisera hanteringen av **elever, kurser och betyg**. Systemet använder **Entity Framework Core (Database First)** tillsammans med **SQL Server** för stabil, säker och skalbar datahantering.
 
-Ramverk: .NET 7
+---
 
-ORM: Entity Framework Core (Database First)
+## 🚀 Funktioner i korthet
 
-Databas: SQL Server
+* Fullständig **CRUD-hantering** av elever och kurser
+* Säker **registrering av elever på kurser** med skydd mot dubbelregistrering
+* **Automatisk rensning av beroenden** vid borttagning (Foreign Key-säkerhet)
+* **Betygshantering** med strikt validering (endast `G` eller `IG`)
+* **Rapportering** med LINQ för tydlig översikt av elever per kurs
+* Stabil konsol-UX med **UTF-8-stöd och emojis**
 
-Datahantering: LINQ för avancerad filtrering och rapportgenerering
+---
 
-✨ Funktioner
-📋 Administration (CRUD)
-Elevregister: Lista alla elever med unika ID-nummer. Möjlighet att lägga till nya elever eller radera befintliga.
+## 🛠 Teknisk Stack
 
-Smart Radering: Vid borttagning av en elev rensas automatiskt alla tillhörande kursregistreringar för att förhindra databasfel (Foreign Key integrity).
+| Komponent       | Teknik                                 |
+| --------------- | -------------------------------------- |
+| Språk           | C# 11                                  |
+| Ramverk         | .NET 7                                 |
+| ORM             | Entity Framework Core (Database First) |
+| Databas         | SQL Server                             |
+| Datahantering   | LINQ                                   |
+| Applikationstyp | Konsolapplikation                      |
 
-Kursöversikt: Se alla kurser och deras kopplade klassrum.
+---
 
-Registreringsmotor: Registrera elever på kurser med inbyggd kontroll som förhindrar dubbelregistreringar.
+## 📋 Administration (CRUD)
 
-Betygshantering: Uppdatera betyg med strikt validering (endast G eller IG).
+### 👩‍🎓 Elevregister
 
-📊 Rapportering
-Elever per kurs: Genererar en visuell rapport som listar varje kurs och tillhörande elever med hjälp av optimerade LINQ-projektioner.
+* Lista alla elever med **unika ID-nummer**
+* Lägg till nya elever
+* Ta bort befintliga elever
 
-🛡️ Stabilitet & UX
-Datavalidering: Inbyggda hjälpmetoder (LäsHeltal, LäsBetyg) som säkerställer att användaren anger korrekt data utan att programmet kraschar.
+### 🧹 Smart radering
 
-Exception Handling: Global felhantering med try-catch för säkra databasanrop.
+* Vid borttagning av en elev raderas **alla tillhörande kursregistreringar automatiskt**
+* Förhindrar Foreign Key-konflikter och databaskrascher
 
-Visuellt UI: Fullt stöd för UTF-8 vilket ger en modern känsla med emojis och tydliga menyer direkt i terminalen.
+### 📚 Kurshantering
+
+* Visa alla kurser
+* Se kopplade klassrum per kurs
+
+### 🧩 Registreringsmotor
+
+* Registrera elever på kurser
+* Inbyggd logik som **förhindrar dubbelregistrering**
+
+### 📝 Betygshantering
+
+* Uppdatera betyg per elev och kurs
+* Endast giltiga betyg tillåts: **G / IG**
+
+---
+
+## 📊 Rapportering
+
+### 📈 Elever per kurs
+
+* Genererar en tydlig rapport som listar:
+
+  * Kursnamn
+  * Tillhörande elever
+* Bygger på **optimerade LINQ-projektioner** för prestanda och läsbarhet
+
+---
+
+## 🛡️ Stabilitet & Användarupplevelse
+
+### ✅ Datavalidering
+
+* Hjälpmetoder som:
+
+  * `LäsHeltal()` – säker inmatning av numeriska värden
+  * `LäsBetyg()` – säkerställer korrekt betygsformat
+* Förhindrar felaktig input och programkrascher
+
+### 🔐 Exception Handling
+
+* Alla databasanrop är inkapslade i `try-catch`
+* Ger tydliga felmeddelanden utan att applikationen avslutas oväntat
+
+### 🎨 Konsol-UI
+
+* Fullt **UTF-8-stöd**
+* Emojis och tydliga menyer för modern känsla
+* Enkel navigering direkt i terminalen
+
+---
+
+## 🏗 Arkitektur
+
+* **Database First** – databasen är källan till sanningen
+* Tydlig separation mellan:
+
+  * Datamodeller
+  * Logik
+  * Användarinteraktion
+* Skalbar struktur som enkelt kan byggas ut
+
+---
+
+## ▶️ Kom igång
+
+1. Klona projektet
+2. Säkerställ att SQL Server är installerat
+3. Uppdatera connection string i `appsettings.json`
+4. Kör applikationen via Visual Studio eller `dotnet run`
+
+---
+
+## 📌 Sammanfattning
+
+**StudentFlow** är ett stabilt, pedagogiskt och välstrukturerat system som lämpar sig perfekt för:
+
+* Skolprojekt
+* Inlärning av EF Core & LINQ
+* Demonstration av CRUD, relationer och dataintegritet
+
+---
+
+💡 *Utvecklat med fokus på kodkvalitet, stabilitet och tydlig användarupplevelse.*
